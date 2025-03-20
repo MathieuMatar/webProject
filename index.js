@@ -1,3 +1,9 @@
+console.log("___________________________________________________________________________________________________________")
+console.log("___________________________________________________________________________________________________________")
+console.log("___________________________________________________________________________________________________________")
+console.log("___________________________________________________________________________________________________________")
+console.log("___________________________________________________________________________________________________________")
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -5,6 +11,7 @@ const serviceRoutes = require('./routes/serviceRoutes');
 const employeeRoutes = require('./routes/employeeRoutes');
 const clientRoutes = require('./routes/clientRoutes');
 const contactRoutes = require('./routes/contactRoutes');
+const projectRoutes = require('./routes/projectRoutes');
 
 const db = require('./config/db');
 
@@ -18,6 +25,7 @@ app.use('/api/services', serviceRoutes);
 app.use('/api/employees', employeeRoutes);
 app.use('/api/clients', clientRoutes);
 app.use('/api/contacts', contactRoutes);
+app.use('/api/projects', projectRoutes);
 
 
 const PORT = process.env.PORT;
