@@ -1,16 +1,6 @@
 const moment = require('moment');
 
 class Contact {
-    /*
-    fields:
-    contact_id     int(11)      NOnull
-    client_id      int(11)      NOnull    relationship with client
-    name           varchar(100)      NOnull
-    email          varchar(100)      YESnull
-    phone          varchar(20)      YESnull
-    role           varchar(50)      YESnull
-    */
-
     constructor(contact_id, client_id, name, email, phone, role) {
         this.contact_id = contact_id;
         this.client_id = client_id;

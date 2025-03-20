@@ -1,21 +1,6 @@
 const moment = require('moment');
 
 class Employee {
-    /*
-    fields:
-    employee_id
-    name
-    password
-    first_name
-    father_name
-    last_name
-    position
-    email
-    phone
-    hire_date
-    info
-
-    */
     constructor(employee_id, name, password, first_name, father_name, last_name, position, email, phone, hire_date, info) {
         this.employee_id = employee_id;
         this.name = name;

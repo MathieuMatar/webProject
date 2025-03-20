@@ -3,7 +3,6 @@ const milestoneRepository = require('../repositories/milestoneRepository');
 class MilestoneController {
     static async createMilestone(req, res) {
         try {
-            //router.post('/:id/milestones', validateMilestone, milestoneController.createMilestone);
             const { id } = req.params;
             const { name, description, date, due_date, status } = req.body;
             const result = await milestoneRepository.createMilestone(id, name, description, date, due_date, status);

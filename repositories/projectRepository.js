@@ -94,23 +94,10 @@ class ProjectRepository {
         }
     }
 
-    /*
-GET /api/projects/:id/employees → Get all employees for a project  function readProjectEmployees(project_id)  
-POST /api/projects/:id/employees/:employee_id → Assign an employee to a project function assignEmployeeToProject(project_id, employee_id)
-DELETE /api/projects/:id/employees/:employee_id → Remove an employee from a project function removeEmployeeFromProject(project_id, employee_id)
-GET /api/projects/:id/services → Get all services for a project function readProjectServices(project_id)
-POST /api/projects/:id/services/:service_id → Link a service to a project function linkServiceToProject(project_id, service_id)
-DELETE /api/projects/:id/services/:service_id → Remove a service from a project function unlinkServiceFromProject(project_id, service_id)
-GET /api/projects/:id/contacts → Get all contacts for a project function readProjectContacts(project_id)
-POST /api/projects/:id/contacts/:contact_id → Associate a contact with a project function associateContactWithProject(project_id, contact_id)
-DELETE /api/projects/:id/contacts/:contact_id → Remove a contact from a project function removeContactFromProject(project_id, contact_id)
-    */
-
     static async readProjectEmployees(project_id) {
         const sql = `SELECT employee_id FROM project_employee WHERE project_id = ?`;
         try {
             const rows = await db.query(sql, [project_id]);
-            // Extract employee_id values into a single array
             const employeeIds = rows.map(row => row.employee_id);
             return employeeIds;
         } catch (error) {

@@ -1,15 +1,6 @@
 const moment = require('moment');
 
 class Milestone {
-    /*
-milestone_id (numeric)
-project_id (numeric)
-name
-description
-date
-due_date
-status 'Not Started','Planning','In Progress','Review','Completed','Delayed','Cancelled'
-    */
 
     constructor(milestone_id, project_id, name, description, date, due_date, status) {
         this.milestone_id = milestone_id;
